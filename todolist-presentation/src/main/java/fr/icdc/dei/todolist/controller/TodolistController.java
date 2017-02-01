@@ -42,7 +42,7 @@ public class TodolistController {
 		return page;
 	}
 	
-	@RequestMapping(value = "/endtask/{id}", method=RequestMethod.GET)
+	@RequestMapping(value = "/end-task/{id}", method=RequestMethod.GET)
 	public RedirectView finishTask(@PathVariable("id") Long id) {
 		todolistService.finishTask(id);
 		return new RedirectView("/todolist-presentation");

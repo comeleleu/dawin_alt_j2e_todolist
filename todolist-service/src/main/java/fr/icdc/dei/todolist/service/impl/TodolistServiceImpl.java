@@ -84,8 +84,8 @@ public class TodolistServiceImpl implements TodolistService {
 	}
 	
 	@Override
-	public void finishTask(Long taskId) {
-		Task task = taskDao.findOne(taskId);
+	public void finishTask(Long id) {
+		Task task = taskDao.findOne(id);
 		task.setClosedDate(new java.util.Date());
 		task.setStatus(new TaskStatus(8));
 		taskDao.save(task);

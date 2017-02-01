@@ -16,7 +16,7 @@
 			<div>
 				${task.name} - ${task.status.name}
 				<c:if test="${task.status.name != 'FINISHED' && task.beginDate le wago}">
-					<a href="<c:url value='/endtask/${task.id}' />">Terminer la tâche</a>
+					<a href="<c:url value='/end-task/${task.id}' />">Terminer la tâche</a>
 				</c:if>
 			</div>
 		 
